@@ -6,27 +6,97 @@
     <title>Framerile's Page</title>
     <style>
         body, html {
-            height: 10%;
+            height: 100%;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f4f4f4; /* Optional background color */
+            background-color: #ffffff; /* Apple stark white background */
+            /* Apple typography font stack */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
         }
-        .center-container {
-            text-align: center;
+
+        /* The overall structural layout */
+        .page-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px; /* Controls X-position distance between text and image */
+            max-width: 1100px;
+            padding: 40px;
+            transform: translateY(0px); /* 1. Controls global Y-position adjustment */
         }
-        .center-container img {
-            max-width: 100%;
+
+        /* Minimalist text styling */
+        .text-side {
+            text-align: left;
+            max-width: 450px;
+        }
+
+        .text-side h1 {
+            font-size: 56px; /* 2. Controls text scale/size for the headline */
+            font-weight: 700;
+            letter-spacing: -0.015em;
+            color: #1d1d1f; /* Apple's deep charcoal black text color */
+            margin: 0 0 12px 0;
+        }
+
+        .text-side p {
+            font-size: 24px; /* 3. Controls text scale/size for the paragraph */
+            font-weight: 400;
+            letter-spacing: -0.001em;
+            color: #86868b; /* Apple's muted gray sub-text color */
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Image sizing and modern shadow effects */
+        .image-side img {
+            display: block;
+            width: 480px; /* 4. Controls scale/size of the image container width */
             height: auto;
-            border-radius: 8px; /* Optional: adds rounded corners */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds a soft shadow */
+            border-radius: 20px; /* Smooth squircle corner radius */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); /* Highly diffused soft shadow */
+        }
+
+        /* Responsive behavior for mobile phones */
+        @media (max-width: 768px) {
+            .page-container {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 40px;
+            }
+            .text-side {
+                text-align: center;
+            }
+            .text-side h1 {
+                font-size: 40px;
+            }
+            .text-side p {
+                font-size: 20px;
+            }
+            .image-side img {
+                width: 100%;
+                max-width: 400px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="center-container">
-        <img src="assets/image1.png" alt="Centered Image">
+
+    <div class="page-container">
+        <!-- Minimalist Left Text Block -->
+        <div class="text-side">
+            <h1>Hello.</h1>
+            <p>This is a minimalist space inspired by premium aesthetics.</p>
+        </div>
+
+        <!-- Right Image Block -->
+        <div class="image-side">
+            <img src="assets/image1.png" alt="Clean Minimalist Display">
+        </div>
     </div>
+
 </body>
 </html>
