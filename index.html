@@ -219,31 +219,44 @@
         <h2>Java Processing Project</h2>
         <p>Press the play button to launch the live web execution application environment.</p>
 
-        <div class="player-wrapper">
-            <!-- Interlocking Black Screen Cover Screen Mask Element -->
-            <div class="black-screen-overlay" id="interactiveCover" onclick="startAppExecution()">
-                <div class="play-button">
-                    <div class="play-arrow"></div>
+        <div style="display:flex; gap:40px; justify-content:center; flex-wrap:wrap;">
+        
+            <div class="player-wrapper">
+                <div class="black-screen-overlay" id="interactiveCover1" onclick="startAppExecution1()">
+                    <div class="play-button">
+                        <div class="play-arrow"></div>
+                    </div>
                 </div>
+        
+                <iframe id="pickcodeFrame1" src="about:blank" allow="autoplay"></iframe>
             </div>
-
-            <!-- Embedded Content Frame Target Element -->
-            <iframe id="pickcodeFrame" src="about:blank" allow="autoplay"></iframe>
+        
+            <div class="player-wrapper">
+                <div class="black-screen-overlay" id="interactiveCover2" onclick="startAppExecution2()">
+                    <div class="play-button">
+                        <div class="play-arrow"></div>
+                    </div>
+                </div>
+        
+                <iframe id="pickcodeFrame2" src="about:blank" allow="autoplay"></iframe>
+            </div>
+        
         </div>
     </section>
 
     <!-- Interactive script triggers execution safely -->
     <script>
-        function startAppExecution() {
-            const cover = document.getElementById('interactiveCover');
-            const frame = document.getElementById('pickcodeFrame');
-            
-            // Hides the black backdrop interface with a clean CSS transition
-            cover.classList.add('hidden-screen');
-            
-            // REWRITTEN: Loads the dedicated direct embed query parameters to bypass the login dashboard wall
-            frame.src = "https://app.pickcode.io/share/cmkbe2ipl01bw1hxrsn8aj9vk";
-        }
+    function startAppExecution1() {
+        document.getElementById('interactiveCover1').classList.add('hidden-screen');
+        document.getElementById('pickcodeFrame1').src =
+            "https://app.pickcode.io/share/cmkbe2ipl01bw1hxrsn8aj9vk";
+    }
+    
+    function startAppExecution2() {
+        document.getElementById('interactiveCover2').classList.add('hidden-screen');
+        document.getElementById('pickcodeFrame2').src =
+            "https://app.pickcode.io/share/cmmkrex7k149i12z3d1vy8ube";
+    }
     </script>
 
 </body>
