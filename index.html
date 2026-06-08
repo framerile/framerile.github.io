@@ -221,24 +221,46 @@
 
         <div style="display:flex; gap:40px; justify-content:center; flex-wrap:wrap;">
         
-            <div class="player-wrapper">
-                <div class="black-screen-overlay" id="interactiveCover1" onclick="startAppExecution1()">
-                    <div class="play-button">
-                        <div class="play-arrow"></div>
-                    </div>
-                </div>
+            <div>
+                <p style="text-align:center; font-weight:600; color:#1d1d1f;">Example 1</p>
         
-                <iframe id="pickcodeFrame1" src="about:blank" allow="autoplay"></iframe>
+                <div class="player-wrapper">
+                    <div class="black-screen-overlay" id="interactiveCover1" onclick="startAppExecution1()">
+                        <div class="play-button">
+                            <div class="play-arrow"></div>
+                        </div>
+                    </div>
+        
+                    <iframe id="pickcodeFrame1" src="about:blank" allow="autoplay"></iframe>
+                </div>
             </div>
         
-            <div class="player-wrapper">
-                <div class="black-screen-overlay" id="interactiveCover2" onclick="startAppExecution2()">
-                    <div class="play-button">
-                        <div class="play-arrow"></div>
-                    </div>
-                </div>
+            <div>
+                <p style="text-align:center; font-weight:600; color:#1d1d1f;">Example 2</p>
         
-                <iframe id="pickcodeFrame2" src="about:blank" allow="autoplay"></iframe>
+                <div class="player-wrapper">
+                    <div class="black-screen-overlay" id="interactiveCover2" onclick="startAppExecution2()">
+                        <div class="play-button">
+                            <div class="play-arrow"></div>
+                        </div>
+                    </div>
+        
+                    <iframe id="pickcodeFrame2" src="about:blank" allow="autoplay"></iframe>
+                </div>
+            </div>
+        
+            <div>
+                <p style="text-align:center; font-weight:600; color:#1d1d1f;">Example 3</p>
+        
+                <div class="player-wrapper">
+                    <div class="black-screen-overlay" id="interactiveCover3" onclick="startAppExecution3()">
+                        <div class="play-button">
+                            <div class="play-arrow"></div>
+                        </div>
+                    </div>
+        
+                    <iframe id="pickcodeFrame3" src="about:blank" allow="autoplay"></iframe>
+                </div>
             </div>
         
         </div>
@@ -256,6 +278,12 @@
         document.getElementById('interactiveCover2').classList.add('hidden-screen');
         document.getElementById('pickcodeFrame2').src =
             "https://app.pickcode.io/share/cmmkrex7k149i12z3d1vy8ube";
+    }
+    
+    function startAppExecution3() {
+        document.getElementById('interactiveCover3').classList.add('hidden-screen');
+        document.getElementById('pickcodeFrame3').src =
+            "https://app.pickcode.io/share/cmkq58v7u2i8srkwmcxbo9wio";
     }
     </script>
 
