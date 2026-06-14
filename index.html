@@ -24,20 +24,20 @@
             box-sizing: border-box;
         }
 
-        /* The structural layout inside the hero section */
+        /* The structural layout inside the hero section - centered for Apple style */
         .page-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 80px; 
             max-width: 1100px;
             padding: 40px;
+            text-align: center;
         }
 
-        /* Minimalist text styling */
+        /* Minimalist centered text styling */
         .text-side {
-            text-align: left;
-            max-width: 450px;
+            text-align: center;
+            max-width: 600px; /* Expanded slightly for better text distribution when centered */
         }
 
         .text-side h1 {
@@ -45,7 +45,7 @@
             font-weight: 700;
             letter-spacing: -0.015em;
             color: #1d1d1f; 
-            margin: 0 0 12px 0;
+            margin: 0 0 16px 0;
         }
 
         .text-side p {
@@ -55,15 +55,6 @@
             color: #86868b; 
             margin: 0;
             line-height: 1.4;
-        }
-
-        /* Image sizing */
-        .image-side img {
-            display: block;
-            width: 480px; 
-            height: auto;
-            border-radius: 20px; 
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); 
         }
 
         /* --- New Interactive Projects Container --- */
@@ -175,22 +166,13 @@
                 padding: 60px 20px;
             }
             .page-container {
-                flex-direction: column-reverse;
-                text-align: center;
-                gap: 40px;
-            }
-            .text-side {
-                text-align: center;
+                padding: 20px;
             }
             .text-side h1 {
                 font-size: 40px;
             }
             .text-side p {
                 font-size: 20px;
-            }
-            .image-side img {
-                width: 100%;
-                max-width: 400px;
             }
             .player-wrapper {
                 width: 100%;
@@ -201,20 +183,15 @@
 </head>
 <body>
 
-    <!-- This wrapper locks your top layout in place -->
     <section class="hero-section">
         <div class="page-container">
             <div class="text-side">
                 <h1>Welcome!</h1>
                 <p>My name is Christopher and this page is to show my projects.</p>
             </div>
-            <div class="image-side">
-                <img src="assets/image1.png" alt="Clean Minimalist Display">
-            </div>
         </div>
     </section>
 
-    <!-- 2. Interactive Java Project Workspace Content Block -->
     <section class="interactive-section">
         <h2>Java Processing Project</h2>
         <p>Here are some of my projects from my AP CSA class. Press the play button to launch the live web execution application environment.</p>
@@ -266,7 +243,6 @@
         </div>
     </section>
 
-    <!-- Interactive script triggers execution safely -->
     <script>
     function startAppExecution1() {
         document.getElementById('interactiveCover1').classList.add('hidden-screen');
