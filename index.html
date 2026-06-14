@@ -169,7 +169,7 @@
         .carousel-viewport {
             position: relative;
             max-width: 1200px;
-            height: 450px;
+            height: 660px; /* Increased from 450px to comfortably hold the new vertical layout */
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -283,8 +283,17 @@
             }
             /* Gallery Mobile adaptations */
             .slide {
-                width: 85%;
-                height: 250px;
+                position: absolute;
+                width: 280px;  /* Adjusted down from 550px so it fits nicely side-by-side */
+                height: 606px; /* Scaled perfectly to match your 375x812 mobile aspect ratio */
+                border-radius: 32px; /* Smoother curve resembling a clean phone bezel */
+                border: 4px solid #1d1d1f; /* Premium subtle boundary border like a device frame */
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+                pointer-events: none;
+                opacity: 0;
+                background-color: #ffffff;
             }
             .slide.prev { transform: translateX(-150px) scale(0.75); opacity: 0.2; }
             .slide.next { transform: translateX(150px) scale(0.75); opacity: 0.2; }
